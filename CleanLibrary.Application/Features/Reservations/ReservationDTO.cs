@@ -11,8 +11,8 @@ namespace CleanLibrary.Application.Features.Reservations
     {
         public required int BookId { get; set; }
         public BookType BookType { get; set; }
-        public DateTime ReservationStartDate { get; set; }
-        public DateTime ReservationEndDate { get; set; }
+        public string ReservationStartDate { get; set; }
+        public string ReservationEndDate { get; set; }
 
         public bool QuickPickup { get; set; }
     }

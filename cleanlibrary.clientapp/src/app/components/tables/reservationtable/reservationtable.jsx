@@ -8,7 +8,7 @@ function ReservationTable({reservations}) {
 
     return (
         <Table striped hover>
-            <thead thead-dark>
+            <thead>
                 <tr>
                     <th>Reserved Book</th>
                     <th>Book Type</th>

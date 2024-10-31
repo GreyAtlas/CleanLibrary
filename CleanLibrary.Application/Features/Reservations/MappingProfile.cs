@@ -16,7 +16,9 @@ namespace CleanLibrary.Application.Features.Reservations
         {
             CreateMap<ReservationDTO, Reservation>();
             CreateMap<CreateReservationCommand, Reservation>();
-            CreateMap<ReservationDTO, CreateReservationCommand>();
+            CreateMap<ReservationDTO, CreateReservationCommand>()
+                .ForMember(d => d.ReservationStartDate, o => o.MapFrom(s => s.ReservationStartDate))
+                .ForMember(d => d.ReservationEndDate, o => o.MapFrom(s => s.ReservationEndDate));
         }
     }
 }

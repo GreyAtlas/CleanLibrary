@@ -39,7 +39,7 @@ function BookTable({books}) {
                         </tr>
                         :
                         books.map(book =>
-                            <tr key={book.id} onClick={() => toggleModal(book.id, book.availableBooks)} >
+                            <tr key={book.id} onClick={() => toggleModal(book.id, book.availableBookTypes)} >
                                 <td>
                                     <img className="img-fluid" src={`data:image/jpg;base64,${book.picture}`} />
                                 </td>

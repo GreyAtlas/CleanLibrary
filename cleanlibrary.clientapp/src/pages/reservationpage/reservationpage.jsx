@@ -6,12 +6,6 @@ function ReservationPage() {
         loading: true
     }
 
-    const initialSearchTerms = {
-        name: null,
-        publishingYear: null,
-        booktypes: []
-    }
-
     const [reservations, setReservations] = useState(initialReservationsState);
 
 
