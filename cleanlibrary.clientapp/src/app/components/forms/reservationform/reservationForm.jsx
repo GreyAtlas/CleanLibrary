@@ -17,7 +17,6 @@ function ReservationForm({ passedBookId, passedAvailableBooks, toggle }) {
         setQuickPickup(!quickPickup);
     }
     function onChange(event) {
-        console.log(state);
         if (event.target.name === "bookType") {
             setState({
                 ...state,[event.target.name]: Number(event.target.value)
@@ -29,11 +28,8 @@ function ReservationForm({ passedBookId, passedAvailableBooks, toggle }) {
             });
 
         }
-
-        console.log(state);
     }
     async function createReservation(event) {
-        console.log(state);
         event.preventDefault();
         const response = await fetch('api/reservation', {
             method: "POST",
@@ -49,7 +45,6 @@ function ReservationForm({ passedBookId, passedAvailableBooks, toggle }) {
             })
         })
         const data = await response.json();
-        console.log(data);
         toggle();
     }
 
@@ -61,13 +56,13 @@ function ReservationForm({ passedBookId, passedAvailableBooks, toggle }) {
                         Book type
                     </Label>
                     <Input type="select" name="bookType" onChange={onChange}>
-                        {passedAvailableBooks.map((type) => {
+                        {passedAvailableBooks.map(( type ) => {
                                 if (type === 0) {
 
-                                    return (<option value={type}> Book</option>);
+                                return (<option key={type} value={type}> Book</option>);
                                 }
                                 else if (type == 1) {
-                                    return (<option value={type}> Audiobook</option>);
+                                    return (<option key={type} value={type}> Audiobook</option>);
 
                                 }
                             })

@@ -17,7 +17,6 @@ function ReservationPage() {
         const response = await fetch('api/reservation');
 
         const data = await response.json();
-        console.log(data);
         const reservationsState = {
             reservations: data,
             loading: false

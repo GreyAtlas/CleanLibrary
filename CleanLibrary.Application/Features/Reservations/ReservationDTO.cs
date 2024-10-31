@@ -11,5 +11,14 @@ namespace CleanLibrary.Application.Features.Reservations
         public string ReservationEndDate { get; set; }
 
         public bool QuickPickup { get; set; }
+
+        public ReservationDTO(int bookId, BookType bookType, string reservationStartDate, string reservationEndDate, bool quickPickup)
+        {
+            BookId = bookId;
+            BookType = bookType;
+            ReservationStartDate = reservationStartDate;
+            ReservationEndDate = reservationEndDate;
+            QuickPickup = quickPickup;
+        }
     }
 }

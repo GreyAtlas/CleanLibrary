@@ -17,6 +17,7 @@ namespace CleanLibrary.Infrastructure
             services.AddDbContext<LibraryDataContext>(options =>
                 {
                     options.UseInMemoryDatabase(databaseName: configuration.GetConnectionString("DefaultConnection") ?? "DEFAULT");
+                    options.EnableSensitiveDataLogging();
                 });
 
             services.AddScoped<IBookRepository, BookRepository>();

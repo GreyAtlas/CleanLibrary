@@ -26,7 +26,6 @@ function BookPage() {
     }, [searchToggle]);
 
     function onChange(event) {
-        console.log(searchTerms );
         if (event.target.name === "book") {
             if (searchTerms.booktypes.includes(0))
             {
@@ -49,10 +48,8 @@ function BookPage() {
         else {
             setSearchTerms({ ...searchTerms,[event.target.name]: event.target.value });
         }
-        console.log(searchTerms);
     }
     async function populateBooksData() {
-        console.log(searchTerms);
         const response = await fetch('api/book', {
             method: "POST",
             headers: {

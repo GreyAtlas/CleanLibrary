@@ -11,5 +11,13 @@ namespace CleanLibrary.Domain.Entities
 
         public List<BookType> AvailableBookTypes { get; set; }
 
+        public Book(int id, string name, DateOnly publishingDate, byte[] picture, List<BookType> availableBookTypes)
+        {
+            Id = id;
+            Name = name;
+            PublishingDate = publishingDate;
+            Picture = picture;
+            AvailableBookTypes = availableBookTypes;
+        }
     }
 }

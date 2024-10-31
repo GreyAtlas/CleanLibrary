@@ -1,5 +1,6 @@
 ﻿using CleanLibrary.Domain.Entities;
 using CleanLibrary.Domain.Enums;
+using System.Xml.Linq;
 
 namespace CleanLibrary.Infrastructure.Data
 {
@@ -15,47 +16,55 @@ namespace CleanLibrary.Infrastructure.Data
             var books = new List<Book>
             {
                 new Book
-                {
-                    Name = "Knyga1",
-                    PublishingDate = new DateOnly(2001,11,3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture1.jpg"),
-                    AvailableBookTypes = new List<BookType>{ BookType.Book, BookType.Audiobook}
-                },
+                (
+                    1,
+                    "Knyga1",
+                    new DateOnly(2001,11,3),
+                    System.IO.File.ReadAllBytes("Pictures/picture1.jpg"),
+                    new List<BookType>{ BookType.Book, BookType.Audiobook}
+                ),
                 new Book
-                {
-                    Name = "Knyga2",
-                    PublishingDate = new DateOnly(2001, 11, 3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture2.jpg"),
-                    AvailableBookTypes = new List<BookType>{ BookType.Book}
-                },
+                (
+                    2,
+                    "Knyga2",
+                    new DateOnly(2001, 11, 3),
+                    System.IO.File.ReadAllBytes("Pictures/picture2.jpg"),
+                    new List<BookType>{ BookType.Book}
+
+
+                ),
                 new Book
-                {
-                    Name = "Knyga3",
-                    PublishingDate = new DateOnly(2003, 11, 3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture3.jpg"),
-                    AvailableBookTypes = new List<BookType>{ BookType.Audiobook}
-                },
+                (
+                    3,
+                    "Knyga3",
+                    new DateOnly(2003, 11, 3),
+                    System.IO.File.ReadAllBytes("Pictures/picture3.jpg"),
+                    new List<BookType>{ BookType.Audiobook}
+                ),
                 new Book
-                {
-                    Name = "Knyga4",
-                    PublishingDate = new DateOnly(2006, 11, 3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture4.jpg"),
-                    AvailableBookTypes = new List<BookType>{ BookType.Book, BookType.Audiobook}
-                },
+                (
+                    4,
+                    "Knyga4",
+                    new DateOnly(2006, 11, 3),
+                    System.IO.File.ReadAllBytes("Pictures/picture4.jpg"),
+                    new List<BookType>{ BookType.Book, BookType.Audiobook}
+                ),
                 new Book
-                {
-                    Name = "Knyga5",
-                    PublishingDate = new DateOnly(2000, 11, 3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture5.jpg"),
-                    AvailableBookTypes = new List<BookType>{BookType.Audiobook}
-                },
+                (
+                    5,
+                    "Knyga5",
+                    new DateOnly(2000, 11, 3),
+                    System.IO.File.ReadAllBytes("Pictures/picture5.jpg"),
+                    new List<BookType>{BookType.Audiobook}
+                ),
                 new Book
-                {
-                    Name = "Knyga6",
-                    PublishingDate = new DateOnly(2011, 11, 3),
-                    Picture = System.IO.File.ReadAllBytes("Pictures/picture6.jpg"),
-                    AvailableBookTypes = new List<BookType>{ BookType.Book, BookType.Audiobook}
-                },
+                (
+                    6,
+                    "Knyga6",
+                    new DateOnly(2011, 11, 3),
+                    System.IO.File.ReadAllBytes("Pictures/picture6.jpg"),
+                    new List<BookType>{ BookType.Book, BookType.Audiobook}
+                )
             };
             var reservations = new List<Reservation>
             {
