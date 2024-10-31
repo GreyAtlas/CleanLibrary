@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace CleanLibrary.Application.Features.Books
 {
-    public class BookDTO
+    public class BookSearchTermsDTO
     {
-        public string Name {  get; set; }
-        public DateOnly PublishingDate { get; set; }
+        public string? Name { get; set; }
+        public int? PublishingDate { get; set; }
+
         //public byte[] Picture { get; set; }
 
-        public List<BookType> AvailableBookTypes { get; set; }
+        public List<BookType>? AvailableBookTypes { get; set; }
     }
 }

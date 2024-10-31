@@ -21,15 +21,11 @@ namespace CleanLibrary.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Book>>> ListBooks(string? name, int? year, List<BookType>? bookTypes)
+        public async Task<ActionResult<List<Book>>> ListBooks([FromBody]BookSearchTermsDTO bookSearchTerms)
         {
-            return await _mediator.Send(new ListBooksQuery(name, year, bookTypes));
+            return await _mediator.Send(new ListBooksQuery(bookSearchTerms));
         }
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult<List<BookDTO>>> GetBook(int id)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 
 }

@@ -12,15 +12,11 @@ namespace CleanLibrary.Application.Features.Books.ListBooks
 {
     public record ListBooksQuery : IRequest<List<Book>>
     {
-        public string? Name { get; set; }
-        public int? Year { get; set; }
-        public List<BookType>? BookTypes { get; set; }
-
-        public ListBooksQuery(string? name, int? year, List<BookType>? bookTypes)
+        public BookSearchTermsDTO SearchTerms { get; set; }
+        
+        public ListBooksQuery(BookSearchTermsDTO searchTerms)
         {
-            Name = name;
-            Year = year;
-            BookTypes = bookTypes;
+            SearchTerms = searchTerms;
         }
     }
 }

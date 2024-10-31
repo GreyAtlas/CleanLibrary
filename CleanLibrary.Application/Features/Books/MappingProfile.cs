@@ -12,7 +12,7 @@ namespace CleanLibrary.Application.Features.Books
     {
         public MappingProfile() 
         {
-            CreateMap<Book, BookDTO>();
+            CreateMap<BookSearchTermsDTO, Book>();
             
         }
     }

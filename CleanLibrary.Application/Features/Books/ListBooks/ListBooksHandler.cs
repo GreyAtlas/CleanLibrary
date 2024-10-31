@@ -19,7 +19,7 @@ namespace CleanLibrary.Application.Features.Books.ListBooks
 
         public async Task<List<Book>> Handle(ListBooksQuery request, CancellationToken cancellationToken)
         {
-            var results = await _bookRepository.ListBooks(request.Name,request.Year,request.BookTypes);
+            var results = await _bookRepository.ListBooks(request.SearchTerms);
 
             return results;//_mapper.Map<List<Book>, List<BookDTO>>(results);
         }

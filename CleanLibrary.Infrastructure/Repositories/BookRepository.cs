@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using System.Linq;
 using CleanLibrary.Domain.Entities;
+using CleanLibrary.Application.Features.Books;
 
 namespace CleanLibrary.Infrastructure.Repositories
 {
@@ -17,22 +18,22 @@ namespace CleanLibrary.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<List<Book>> ListBooks(string? name, int? year, List<BookType>? bookTypes)
+        public async Task<List<Book>> ListBooks(BookSearchTermsDTO bookSearchTerms)
         {
             var queryable = _context.Books.AsQueryable();
-            if (name != null)
+            if (bookSearchTerms.Name != null && bookSearchTerms.Name != "")
             {
-                queryable = queryable.Where(x => x.Name == name);
+                queryable = queryable.Where(x => x.Name == bookSearchTerms.Name);
             }
-            if (year != null)
+            if (bookSearchTerms.PublishingDate != null)
             {
-                queryable = queryable.Where(x => x.PublishingDate.Year == year);
+                queryable = queryable.Where(x => x.PublishingDate.Year == bookSearchTerms.PublishingDate);
             }
-            if (bookTypes != null)
+            if (bookSearchTerms.AvailableBookTypes != null)
             {
-                if(bookTypes.Count > 0)
+                if(bookSearchTerms.AvailableBookTypes.Count > 0)
                 {
-                    foreach(var bookType in bookTypes)
+                    foreach(var bookType in bookSearchTerms.AvailableBookTypes)
                     {
                         queryable = queryable.Where(x => x.AvailableBookTypes.Contains(bookType));
                     }
