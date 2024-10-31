@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Table, Button } from 'reactstrap';
+import { Table } from 'reactstrap';
 import "../../tables/table.css";
 
 function ReservationTable({reservations}) {

@@ -16,8 +16,4 @@
     <ProjectReference Include="..\CleanLibrary.Domain\CleanLibrary.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Common\" />
-  </ItemGroup>
-
 </Project>

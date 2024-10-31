@@ -13,6 +13,17 @@ function ReservationPage() {
         populateReservationsData();
 
     }, []);
+    async function populateReservationsData() {
+        const response = await fetch('api/reservation');
+
+        const data = await response.json();
+        console.log(data);
+        const reservationsState = {
+            reservations: data,
+            loading: false
+        }
+        setReservations(reservationsState);
+    }
 
     const contents = reservations.loading ?
         <p><em>Loading...</em></p> :
@@ -26,17 +37,6 @@ function ReservationPage() {
         </div>
     );
 
-    async function populateReservationsData() {
-        const response = await fetch('api/reservation');
-
-        const data = await response.json();
-        console.log(data);
-        const reservationsState = {
-            reservations: data,
-            loading: false
-        }
-        setReservations(reservationsState);
-    }
 }
 
 export default ReservationPage;

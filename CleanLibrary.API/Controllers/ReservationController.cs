@@ -1,10 +1,8 @@
-﻿using AutoMapper;
-using CleanLibrary.Application.Features.Books.ListBooks;
-using CleanLibrary.Application.Features.Reservations;
+﻿using CleanLibrary.Application.Features.Reservations;
 using CleanLibrary.Application.Features.Reservations.CreateReservation;
 using CleanLibrary.Application.Features.Reservations.ListReservations;
 using CleanLibrary.Domain.Entities;
-using CleanLibrary.Domain.Enums;
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

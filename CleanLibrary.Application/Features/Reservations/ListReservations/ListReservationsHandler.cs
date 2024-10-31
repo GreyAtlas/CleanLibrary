@@ -1,13 +1,7 @@
-﻿using AutoMapper;
-using CleanLibrary.Application.Features.Books.ListBooks;
-using CleanLibrary.Application.Interfaces;
+﻿using CleanLibrary.Application.Interfaces;
 using CleanLibrary.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AutoMapper;
 
 namespace CleanLibrary.Application.Features.Reservations.ListReservations
 {

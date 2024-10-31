@@ -1,7 +1,6 @@
 ﻿using CleanLibrary.Application.Interfaces;
 using MediatR;
 using AutoMapper;
-using System.Diagnostics;
 using CleanLibrary.Domain.Entities;
 
 namespace CleanLibrary.Application.Features.Books.ListBooks

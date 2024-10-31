@@ -1,6 +1,5 @@
 ﻿using CleanLibrary.Application.Features.Books;
 using CleanLibrary.Domain.Entities;
-using CleanLibrary.Domain.Enums;
 
 namespace CleanLibrary.Application.Interfaces
 {

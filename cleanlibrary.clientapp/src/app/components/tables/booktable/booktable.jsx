@@ -1,5 +1,5 @@
-import React, { Component, useState, useEffect, Fragment } from 'react';
-import { Table, Button } from 'reactstrap';
+import React, {useState, Fragment } from 'react';
+import { Table } from 'reactstrap';
 import "../../tables/table.css";
 import ReservationModal from "../../modals/reservationmodal/reservationmodal";
 

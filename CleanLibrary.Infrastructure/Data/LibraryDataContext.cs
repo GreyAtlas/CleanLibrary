@@ -1,5 +1,4 @@
-﻿using CleanLibrary.Domain.Common;
-using CleanLibrary.Domain.Entities;
+﻿using CleanLibrary.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanLibrary.Infrastructure.Data

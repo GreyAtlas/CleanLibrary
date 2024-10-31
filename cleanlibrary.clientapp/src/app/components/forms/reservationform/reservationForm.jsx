@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 
 function ReservationForm({ passedBookId, passedAvailableBooks, toggle }) {

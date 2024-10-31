@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import BookTable from '../../app/components/tables/booktable/booktable';
-import { Col, Container, Row, Button, FormGroup, Label, Input, Form} from 'reactstrap';
+import { Col, Container, Row, Button, FormGroup, Label, Input} from 'reactstrap';
 import "./bookpage.css"
 
 function BookPage() {

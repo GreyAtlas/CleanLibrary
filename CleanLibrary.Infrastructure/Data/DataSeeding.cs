@@ -1,13 +1,5 @@
-﻿using CleanLibrary.Domain.Common;
-using CleanLibrary.Domain.Entities;
+﻿using CleanLibrary.Domain.Entities;
 using CleanLibrary.Domain.Enums;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanLibrary.Infrastructure.Data
 {

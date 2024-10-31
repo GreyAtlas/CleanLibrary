@@ -1,10 +1,6 @@
-﻿using CleanLibrary.Application;
-using CleanLibrary.Application.Interfaces;
-using CleanLibrary.Domain.Enums;
+﻿using CleanLibrary.Application.Interfaces;
 using CleanLibrary.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
-using System.Linq;
 using CleanLibrary.Domain.Entities;
 using CleanLibrary.Application.Features.Books;
 

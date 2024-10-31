@@ -1,6 +1,4 @@
-﻿using CleanLibrary.Application.Features.WeatherForecasts;
-using CleanLibrary.Domain.Entities;
-using CleanLibrary.Domain.Enums;
+﻿using CleanLibrary.Domain.Entities;
 using CleanLibrary.Application.Features.Books.ListBooks;
 using CleanLibrary.Application.Features.Books;
 using MediatR;
